@@ -1,19 +1,17 @@
-# ConvMatch implementation
+# PRNet implementation
 
-Pytorch implementation of ConvMatch for AAAI'23 paper ["ConvMatch: Rethinking Network Design for Two-View Correspondence Learning"](https://ojs.aaai.org/index.php/AAAI/article/view/25456), by Shihua Zhang and [Jiayi Ma](https://scholar.google.com/citations?user=73trMQkAAAAJ&hl=en&oi=ao).
-
-This paper focuses on establishing correspondences between two images. We design a correspondence learning network called ConvMatch that for the first time can leverage convolutional neural network (CNN) as the backbone to capture better context, thus avoiding the complex design of extra blocks. Specifically, with the observation that sparse motion vectors and dense motion field can be converted into each other with interpolating and sampling, we regularize the putative motion vectors by estimating dense motion field implicitly, then rectify the errors caused by outliers in local areas with CNN, and finally obtain correct motion vectors from the rectified motion field.
-
-This repo contains the code and data for essential matrix estimation described in our AAAI paper.
 
 If you find this project useful, please cite:
 
 ```
-@inproceedings{zhang2023convmatch,
-  title={ConvMatch: Rethinking Network Design for Two-View Correspondence Learning},
-  author={Zhang, Shihua and Ma, Jiayi},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year={2023}
+@article{kang2025prnet,
+  title={PRNet: Parallel Reinforcement Network for two-view correspondence learning},
+  author={Kang, Zheng and Lai, Taotao and Li, Zuoyong and Wei, Lifang and Chen, Riqing},
+  journal={Knowledge-Based Systems},
+  volume={310},
+  pages={112978},
+  year={2025},
+  publisher={Elsevier}
 }
 ```
 
@@ -94,7 +92,7 @@ The provided models are trained using SIFT. You had better retrain the model if 
 You can follow the provided example scirpts in `./dump_match` to generate dataset for your own local feature or data.
 
 ## Acknowledgement
-This code is borrowed from [OANet](https://github.com/zjhthu/OANet) and [CLNet](https://github.com/sailor-z/CLNet). If using the part of code related to data generation, testing and evaluation, please cite these papers.
+This code is borrowed from [ConvMatch](https://github.com/krbangzi/ConvMatch)  If using the part of code related to data generation, testing and evaluation, please cite these papers.
 
 ```
 @inproceedings{zhang2019learning,
@@ -110,5 +108,11 @@ This code is borrowed from [OANet](https://github.com/zjhthu/OANet) and [CLNet](
   booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
   pages={6464--6473},
   year={2021}
+}
+@inproceedings{zhang2023convmatch,
+  title={ConvMatch: Rethinking Network Design for Two-View Correspondence Learning},
+  author={Zhang, Shihua and Ma, Jiayi},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2023}
 }
 ```
