@@ -26,8 +26,8 @@ Please use Python 3.6, opencv-contrib-python (3.4.0.12) and Pytorch (>= 1.7.0). 
 
 For a quick start, clone the repo and download the pretrained model.
 ```bash
-git clone https://github.com/SuhZhang/ConvMatch 
-cd ConvMatch 
+git clone https://github.com/kangzheng1999/PRNet
+
 ```
 Then download the pretrained models from [here](https://drive.google.com/drive/folders/1JKuIWhMXe9ve3wRPb_xZmX37ZH1bxAC3).
 
